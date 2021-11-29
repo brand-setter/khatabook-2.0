@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GoogleSignIn"
+            android:name=".Auth"
             android:exported="true"
             android:theme="@style/Theme.Khatabook20" />
         <activity
