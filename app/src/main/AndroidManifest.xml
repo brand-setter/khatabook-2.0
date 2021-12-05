@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Khatabook20">
+        <activity android:name=".auth.SigninActivity"></activity>
+        <activity android:name=".auth.SignupActivity" />
         <activity
             android:name=".Splash_bg"
             android:exported="true"

@@ -34,7 +34,7 @@
 //
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_gsignin)
+//        setContentView(R.layout.fragment_sign_in)
 //        supportActionBar!!.hide()
 //
 //        mAuth = Firebase.auth
@@ -48,7 +48,7 @@
 //        // Build a GoogleSignInClient with the options specified by gso.
 //
 //        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
-//        findViewById<View>(R.id.sign_in_btn).setOnClickListener {
+//        findViewById<View>(R.id.signupwithgoogle).setOnClickListener {
 //            signIn()
 //        }
 //    }
