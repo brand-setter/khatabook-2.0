@@ -9,7 +9,7 @@ class Splash_bg : AppCompatActivity() {
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val intent = Intent(this, GoogleSignIn::class.java)
+        val intent = Intent(this, Auth::class.java)
         startActivity(intent)
         finish()
     }
