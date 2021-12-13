@@ -22,7 +22,7 @@ class ProfileFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
-        var binding: FragmentProfileBinding = DataBindingUtil.inflate(inflater,  R.layout.fragment_home,
+        var binding: FragmentProfileBinding = DataBindingUtil.inflate(inflater,  R.layout.fragment_profile,
             container,false)
         return binding.root
     }
