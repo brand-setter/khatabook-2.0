@@ -1,4 +1,4 @@
-package com.example.khatabook_20.auth
+package com.example.khatabook_20.ui.auth
 
 import android.util.Log
 import android.view.View
@@ -10,7 +10,7 @@ class KhatabookRegisterModel: ViewModel() {
     var email:String?=null
     var password:String?=null
 
-   var authListener:AuthInferface?=null
+   var authListener: AuthInferface?=null
 
     fun onLoginButtonClicked(view: View){
       authListener?.onStarted()

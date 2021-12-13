@@ -10,14 +10,18 @@ class landingscreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_navigation)
+
         var binding: ActivityLandingBinding
         = setContentView(this, R.layout.activity_landing)
 
 
-        val tablayout = binding.tablayout
-        val viewpager = binding.viewpager
+        val tablayout = binding.tablayout1
+        val viewpager = binding.viewpager1
+
         tablayout.addTab(tablayout.newTab().setText("Transactions"))
         tablayout.addTab(tablayout.newTab().setText("History"))
+        tablayout.addTab(tablayout.newTab().setText("Profile"))
+
         tablayout.tabGravity = TabLayout.GRAVITY_FILL
 
         val adapter = ViewPager(this, supportFragmentManager,

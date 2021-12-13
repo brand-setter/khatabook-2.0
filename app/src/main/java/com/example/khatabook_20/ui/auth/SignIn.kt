@@ -1,17 +1,18 @@
-package com.example.khatabook_20.auth
+package com.example.khatabook_20.ui.auth
 
+import android.annotation.SuppressLint
+import android.app.AlertDialog
+import android.app.Dialog
+import android.content.DialogInterface
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProviders
+import android.widget.Adapter
+import android.widget.ListAdapter
 import com.example.khatabook_20.R
-import com.example.khatabook_20.databinding.FragmentSignUpBinding
-import com.example.khatabook_20.util.toast
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,10 +21,12 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [SignUp.newInstance] factory method to
+ * Use the [SignIn.newInstance] factory method to
  * create an instance of this fragment.
  */
-class SignUp : Fragment() , AuthInferface {
+class SignIn : Fragment() {
+
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -40,31 +43,14 @@ class SignUp : Fragment() , AuthInferface {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val rootView=inflater.inflate(R.layout.fragment_sign_in, container, false)
+//        val businessAccount:ArrayList<String> =
+//        arrayListOf("Hiroshi","Misae","Himawari","Action kamen")
+
+
         // Inflate the layout for this fragment
-//        val rootView= inflater.inflate(R.layout.fragment_sign_up, container, false)
 
-        val binding:FragmentSignUpBinding=DataBindingUtil.inflate(inflater,R.layout.fragment_sign_up,container,false)
-
-        val viewModel= ViewModelProviders.of(this).get(KhatabookRegisterModel::class.java)
-
-        binding.viewModel=viewModel
-        viewModel.authListener=this
-
-
-        return binding.root
-    }
-    override fun onStarted() {
-        activity?.toast("Started")
-
-    }
-
-    override fun onSuccess() {
-        activity?.toast("Success")
-
-        }
-
-    override fun onFailure(message:String) {
-        activity?.toast(message)
+        return rootView
     }
 
     companion object {
@@ -74,18 +60,16 @@ class SignUp : Fragment() , AuthInferface {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment SignUp.
+         * @return A new instance of fragment SignIn.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            SignUp().apply {
+            SignIn().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
                 }
             }
     }
-
-
 }
