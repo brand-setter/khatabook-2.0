@@ -20,7 +20,7 @@ class landingscreen : AppCompatActivity() {
         tablayout.addTab(tablayout.newTab().setText("History"))
         tablayout.tabGravity = TabLayout.GRAVITY_FILL
 
-        val adapter = ViewPagerAdapter(this, supportFragmentManager,
+        val adapter = ViewPager(this, supportFragmentManager,
             tablayout.tabCount)
         viewpager.adapter = adapter
 
