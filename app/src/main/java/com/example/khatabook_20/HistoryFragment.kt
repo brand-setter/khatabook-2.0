@@ -11,6 +11,8 @@ import com.example.khatabook_20.databinding.FragmentHomeBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
 
 
 /**
@@ -23,7 +25,7 @@ class HistoryFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
-        var binding: FragmentHistoryBinding = DataBindingUtil.inflate(inflater,  R.layout.fragment_home,
+        val binding: FragmentHistoryBinding = DataBindingUtil.inflate(inflater,  R.layout.fragment_history,
             container,false)
         return binding.root
     }
