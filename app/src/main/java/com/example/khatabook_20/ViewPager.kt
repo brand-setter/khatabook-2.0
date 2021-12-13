@@ -15,6 +15,9 @@ class ViewPager (var context: Context, fm: FragmentManager, var totalTabs: Int) 
             1 -> {
                 HistoryFragment()
             }
+            2 -> {
+                ProfileFragment()
+            }
             else -> getItem(position)
         }
     }
