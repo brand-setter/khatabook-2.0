@@ -1,33 +1,28 @@
 package com.example.khatabook_20
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import androidx.appcompat.app.AlertDialog
-
 import androidx.appcompat.app.AppCompatActivity
-import androidx.viewpager.widget.ViewPager
+import androidx.databinding.DataBindingUtil
 import com.example.khatabook_20.databinding.ActivityAuthBinding
 import com.google.android.material.tabs.TabLayout
 
-class Auth:AppCompatActivity() {
-
-        private lateinit var binding: ActivityAuthBinding
+class Auth: AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        supportActionBar!!.hide()
+           supportActionBar!!.hide()
+        var binding: ActivityAuthBinding
+                = DataBindingUtil.setContentView(this, R.layout.activity_auth)
 
-//        val DialogView= LayoutInflater.from(this).inflate(R.layout.activity_auth,null)
-//
-//        val Builder= AlertDialog.Builder(this).setView(DialogView).setTitle("Login Form")
-//
-//        val alertDialog=Builder.show()
-       val tablayout = binding.tablayout
+
+        val tablayout = binding.tablayout
         val viewpager = binding.viewpager
+
         tablayout.addTab(tablayout.newTab().setText("SignIn"))
         tablayout.addTab(tablayout.newTab().setText("SignUp"))
+
         tablayout.tabGravity = TabLayout.GRAVITY_FILL
+
         val adapter = ViewPagerAdapter(this, supportFragmentManager,
             tablayout.tabCount)
         viewpager.adapter = adapter
@@ -44,7 +39,9 @@ class Auth:AppCompatActivity() {
 
             }
         })
+
     }
+
 }
 
 

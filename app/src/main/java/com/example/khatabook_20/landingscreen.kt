@@ -1,6 +1,8 @@
 package com.example.khatabook_20
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.setContentView
 import com.example.khatabook_20.databinding.ActivityLandingBinding
@@ -20,7 +22,6 @@ class landingscreen : AppCompatActivity() {
 
         tablayout.addTab(tablayout.newTab().setText("Transactions"))
         tablayout.addTab(tablayout.newTab().setText("History"))
-        tablayout.addTab(tablayout.newTab().setText("Profile"))
 
         tablayout.tabGravity = TabLayout.GRAVITY_FILL
 

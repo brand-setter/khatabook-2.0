@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 
 
 class ViewPager (var context: Context, fm: FragmentManager, var totalTabs: Int) : FragmentPagerAdapter(fm) {
+
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> {
@@ -15,12 +16,10 @@ class ViewPager (var context: Context, fm: FragmentManager, var totalTabs: Int) 
             1 -> {
                 HistoryFragment()
             }
-            2 -> {
-                ProfileFragment()
-            }
             else -> getItem(position)
         }
     }
+
     override fun getCount(): Int {
         return totalTabs
     }

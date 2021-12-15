@@ -1,17 +1,25 @@
 package com.example.khatabook_20.ui.auth
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.khatabook_20.R
 import com.example.khatabook_20.databinding.FragmentSignUpBinding
+import com.example.khatabook_20.landingscreen
 import com.example.khatabook_20.ui.auth.AuthInferface
 import com.example.khatabook_20.ui.auth.KhatabookRegisterModel
 import com.example.khatabook_20.util.toast
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_business.*
+import kotlinx.android.synthetic.main.activity_business.view.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,9 +68,6 @@ class SignUp : Fragment() , AuthInferface {
         binding.viewModel=viewModel
         viewModel.authListener=this
 
-
-//        binding.
-
     }
 
 
@@ -75,7 +80,30 @@ class SignUp : Fragment() , AuthInferface {
 
     override fun onSuccess() {
         activity?.toast("Success")
+        val alertDialogLayout=LayoutInflater.from(activity).inflate(R.layout.activity_business,null)
+        val builder= activity?.let { AlertDialog.Builder(it).setView(alertDialogLayout).setTitle("Choose a Business") }
+        val alertDialog=builder?.show()
+        alertDialogLayout.fab.setOnClickListener {
+            Snackbar.make(it, "Creating a new Business Account", Snackbar.LENGTH_LONG)
+                .setAction("Action", null)
+                .show()
+        }
 
+        alertDialog?.setCancelable(false);
+
+        alertDialogLayout.textView1.setOnClickListener {
+            alertDialog?.dismiss()
+            val intent= Intent(activity,landingscreen::class.java)
+            startActivity(intent)
+            activity?.finish()
+        }
+
+        alertDialogLayout.textView2.setOnClickListener {
+            alertDialog?.dismiss()
+            val intent= Intent(activity,landingscreen::class.java)
+            startActivity(intent)
+            activity?.finish()
+        }
         }
 
     override fun onFailure(message:String) {
@@ -103,6 +131,8 @@ class SignUp : Fragment() , AuthInferface {
                 }
             }
     }
+
+
 
 
 }

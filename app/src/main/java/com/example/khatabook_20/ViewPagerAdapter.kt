@@ -1,6 +1,8 @@
 package com.example.khatabook_20
 
 import android.content.Context
+import android.view.LayoutInflater
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -13,6 +15,7 @@ class ViewPagerAdapter(var context: Context, fm: FragmentManager, var totalTabs:
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> {
+
                 SignIn()
             }
             1 -> {

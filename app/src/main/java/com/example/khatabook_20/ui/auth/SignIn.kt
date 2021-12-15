@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
 import android.widget.ListAdapter
+import androidx.fragment.app.DialogFragment
 import com.example.khatabook_20.R
 
 
@@ -44,11 +45,6 @@ class SignIn : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val rootView=inflater.inflate(R.layout.fragment_sign_in, container, false)
-//        val businessAccount:ArrayList<String> =
-//        arrayListOf("Hiroshi","Misae","Himawari","Action kamen")
-
-
-        // Inflate the layout for this fragment
 
         return rootView
     }
