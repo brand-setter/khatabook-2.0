@@ -1,13 +1,12 @@
 package com.example.khatabook_20
 
 import android.content.Context
-import android.view.LayoutInflater
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.khatabook_20.ui.auth.SignIn
-import com.example.khatabook_20.ui.auth.SignUp
+
+import com.example.khatabook_20.ui.auth.signin.SignInFragment
+import com.example.khatabook_20.ui.auth.signup.SignUpFragment
 
 
 class ViewPagerAdapter(var context: Context, fm: FragmentManager, var totalTabs: Int) : FragmentPagerAdapter(fm) {
@@ -16,10 +15,10 @@ class ViewPagerAdapter(var context: Context, fm: FragmentManager, var totalTabs:
         return when (position) {
             0 -> {
 
-                SignIn()
+                SignInFragment()
             }
             1 -> {
-                SignUp()
+                SignUpFragment()
             }
             else -> getItem(position)
         }

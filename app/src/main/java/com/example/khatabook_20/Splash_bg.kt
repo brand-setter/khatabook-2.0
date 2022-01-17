@@ -1,6 +1,6 @@
 package com.example.khatabook_20
 
-import android.R
+
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle

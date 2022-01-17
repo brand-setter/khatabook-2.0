@@ -1,8 +1,6 @@
 package com.example.khatabook_20
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.setContentView
 import com.example.khatabook_20.databinding.ActivityLandingBinding
