@@ -6,6 +6,9 @@
 
     <data>
         <variable
+            name="khatabook"
+            type="com.example.khatabook_20.database.KhataBook" />
+        <variable
             name="signUpViewModel"
             type="com.example.khatabook_20.ui.auth.signup.SignUpViewModel" />
     </data>
@@ -25,6 +28,7 @@
             android:layout_marginTop="56dp"
             android:layout_marginRight="16dp"
             android:hint="@string/email"
+            android:text="@={khatabook.email}"
             android:inputType="textEmailAddress"
             android:textColor="?attr/colorOnSecondary"
             app:layout_constraintEnd_toEndOf="parent"
@@ -40,6 +44,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:hint="@string/password"
+            android:text="@={khatabook.password}"
             android:inputType="textPassword"
             android:textColor="?attr/colorOnSecondary"
             app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +60,7 @@
             android:background="@drawable/button"
             android:fontFamily="sans-serif-thin"
             android:text="signin"
-            android:onClick="@{() -> signUpViewModel.login()}"
+            android:onClick="@{() -> signUpViewModel.login(khatabook.email,khatabook.password)}"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"

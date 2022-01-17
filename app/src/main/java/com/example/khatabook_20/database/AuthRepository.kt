@@ -14,10 +14,10 @@ import com.google.firebase.auth.FirebaseUser
 class AuthRepository(application: Application){
 private var auth: FirebaseAuth
 private lateinit var application:Application
-    private val firebaseUserAuthRepository= MutableLiveData<FirebaseUser?>()
+    private var firebaseUserAuthRepository= MutableLiveData<FirebaseUser?>()
 
 
-    private val userLoggedAuthRepository=MutableLiveData<Boolean?>()
+    private var userLoggedAuthRepository=MutableLiveData<Boolean?>()
 
 
     init{
@@ -29,11 +29,11 @@ private lateinit var application:Application
         }
     }
 
-    fun getFirebaseUserMutableLiveData(): MutableLiveData<FirebaseUser?>? {
+    fun getFirebaseUserMutableLiveData(): MutableLiveData<FirebaseUser?>{
         return firebaseUserAuthRepository
     }
 
-    fun getUserLoggedMutableLiveData(): MutableLiveData<Boolean?>? {
+    fun getUserLoggedMutableLiveData(): MutableLiveData<Boolean?> {
           return userLoggedAuthRepository
     }
 
@@ -46,6 +46,7 @@ private lateinit var application:Application
             auth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener{
                     if(!it.isSuccessful) return@addOnCompleteListener
+                    firebaseUserAuthRepository.postValue(auth.currentUser)
                     Log.d("SignUp", "${it.result?.user?.uid}")
                 }
 
@@ -63,6 +64,7 @@ private lateinit var application:Application
         auth.signInWithEmailAndPassword(email,password)
             .addOnCompleteListener{
                 if(!it.isSuccessful) return@addOnCompleteListener
+                firebaseUserAuthRepository.postValue(auth.currentUser)
                 Toast.makeText(application,"Welcome back!",Toast.LENGTH_LONG).show()
             }
 

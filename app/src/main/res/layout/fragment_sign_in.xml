@@ -5,6 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
+            name="khatabook"
+            type="com.example.khatabook_20.database.KhataBook" />
+        <variable
             name="signInViewModel"
             type="com.example.khatabook_20.ui.auth.signin.SignInViewModel" />
     </data>
@@ -21,7 +24,6 @@
             android:layout_marginTop="56dp"
             android:layout_marginRight="16dp"
             android:hint="@string/username"
-            android:text="@={signInViewModel.username}"
             android:inputType="textPersonName"
             android:textColor="?attr/colorOnSecondary"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,6 +38,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:hint="@string/email"
+            android:text="@={khatabook.email}"
             android:inputType="textEmailAddress"
             android:textColor="?attr/colorOnSecondary"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,6 +54,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:hint="@string/password"
+            android:text="@={khatabook.password}"
             android:inputType="textPassword"
             android:textColor="?attr/colorOnSecondary"
             app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +70,7 @@
             android:background="@drawable/button"
             android:fontFamily="sans-serif-thin"
             android:text="@string/signup"
-            android:onClick="@{() -> signInViewModel.register()}"
+            android:onClick="@{() -> signInViewModel.register(khatabook.email,khatabook.password)}"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
