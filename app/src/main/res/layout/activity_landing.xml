@@ -5,7 +5,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".landingscreen">
+    tools:context=".ui.home.landingscreen">
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout1"
         app:tabUnboundedRipple="true"

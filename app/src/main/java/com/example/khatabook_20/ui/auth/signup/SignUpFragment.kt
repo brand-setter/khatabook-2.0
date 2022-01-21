@@ -10,11 +10,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import com.example.khatabook_20.R
 import com.example.khatabook_20.database.KhataBook
 import com.example.khatabook_20.databinding.FragmentSignUpBinding
-import com.example.khatabook_20.landingscreen
+import com.example.khatabook_20.ui.home.Landingscreen
 
 
 class SignUpFragment : Fragment() {
@@ -31,7 +30,7 @@ class SignUpFragment : Fragment() {
 
         signUpViewModel.firebaseUser.observe(viewLifecycleOwner, Observer {
             if(it!=null){
-                val intent= Intent(application, landingscreen::class.java)
+                val intent= Intent(application, Landingscreen::class.java)
                 startActivity(intent)
             }
         })

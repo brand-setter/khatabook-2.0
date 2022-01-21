@@ -1,8 +1,9 @@
-package com.example.khatabook_20
+package com.example.khatabook_20.ui.auth
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.example.khatabook_20.R
 import com.example.khatabook_20.databinding.ActivityAuthBinding
 import com.google.android.material.tabs.TabLayout
 

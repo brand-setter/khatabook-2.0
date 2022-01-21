@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Auth"
+            android:name=".ui.auth.Auth"
             android:exported="true"
             android:theme="@style/Theme.Khatabook20">
         <intent-filter>
@@ -32,7 +32,7 @@
         </activity>
 
         <activity
-            android:name=".landingscreen"
+            android:name=".ui.home.landingscreen"
             android:exported="true">
 
 

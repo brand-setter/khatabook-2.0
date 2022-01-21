@@ -21,6 +21,6 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.khatabook_20.HomeFragment"
+        android:name="com.example.khatabook_20.ui.home.home.HomeFragment"
         android:label="HomeFragment" />
 </navigation>

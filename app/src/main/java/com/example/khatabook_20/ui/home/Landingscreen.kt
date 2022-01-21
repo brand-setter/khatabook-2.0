@@ -1,12 +1,13 @@
-package com.example.khatabook_20
+package com.example.khatabook_20.ui.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.setContentView
+import com.example.khatabook_20.R
 import com.example.khatabook_20.databinding.ActivityLandingBinding
 import com.google.android.material.tabs.TabLayout
 
-class landingscreen : AppCompatActivity() {
+class Landingscreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_navigation)
