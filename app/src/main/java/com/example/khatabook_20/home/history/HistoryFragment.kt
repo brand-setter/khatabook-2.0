@@ -1,4 +1,4 @@
-package com.example.khatabook_20.ui.home.history
+package com.example.khatabook_20.home.history
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,30 +1,30 @@
-package com.example.khatabook_20.ui.home
+package com.example.khatabook_20.auth
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil.setContentView
+import androidx.databinding.DataBindingUtil
 import com.example.khatabook_20.R
-import com.example.khatabook_20.databinding.ActivityLandingBinding
+import com.example.khatabook_20.databinding.ActivityAuthBinding
 import com.google.android.material.tabs.TabLayout
 
-class Landingscreen : AppCompatActivity() {
+class Auth: AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_navigation)
 
-        var binding: ActivityLandingBinding
-        = setContentView(this, R.layout.activity_landing)
+           supportActionBar!!.hide()
+        var binding: ActivityAuthBinding
+                = DataBindingUtil.setContentView(this, R.layout.activity_auth)
 
 
-        val tablayout = binding.tablayout1
-        val viewpager = binding.viewpager1
+        val tablayout = binding.tablayout
+        val viewpager = binding.viewpager
 
-        tablayout.addTab(tablayout.newTab().setText("Transactions"))
-        tablayout.addTab(tablayout.newTab().setText("History"))
+        tablayout.addTab(tablayout.newTab().setText("SignIn"))
+        tablayout.addTab(tablayout.newTab().setText("SignUp"))
 
         tablayout.tabGravity = TabLayout.GRAVITY_FILL
 
-        val adapter = ViewPager(this, supportFragmentManager,
+        val adapter = ViewPagerAdapter(this, supportFragmentManager,
             tablayout.tabCount)
         viewpager.adapter = adapter
 
@@ -42,4 +42,9 @@ class Landingscreen : AppCompatActivity() {
         })
 
     }
+
 }
+
+
+
+

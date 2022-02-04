@@ -1,12 +1,12 @@
-package com.example.khatabook_20.ui.auth
+package com.example.khatabook_20.auth
 
 import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 
-import com.example.khatabook_20.ui.auth.signin.SignInFragment
-import com.example.khatabook_20.ui.auth.signup.SignUpFragment
+import com.example.khatabook_20.auth.signin.SignInFragment
+import com.example.khatabook_20.auth.signup.SignUpFragment
 
 
 class ViewPagerAdapter(var context: Context, fm: FragmentManager, var totalTabs: Int) : FragmentPagerAdapter(fm) {

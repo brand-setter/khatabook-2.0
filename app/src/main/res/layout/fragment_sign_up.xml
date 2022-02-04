@@ -7,10 +7,10 @@
     <data>
         <variable
             name="khatabook"
-            type="com.example.khatabook_20.database.KhataBook" />
+            type="com.example.khatabook_20.model.KhataBook" />
         <variable
             name="signUpViewModel"
-            type="com.example.khatabook_20.ui.auth.signup.SignUpViewModel" />
+            type="com.example.khatabook_20.auth.signup.SignUpViewModel" />
     </data>
 
 

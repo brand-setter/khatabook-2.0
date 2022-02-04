@@ -6,10 +6,10 @@
     <data>
         <variable
             name="khatabook"
-            type="com.example.khatabook_20.database.KhataBook" />
+            type="com.example.khatabook_20.model.KhataBook" />
         <variable
             name="signInViewModel"
-            type="com.example.khatabook_20.ui.auth.signin.SignInViewModel" />
+            type="com.example.khatabook_20.auth.signin.SignInViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
