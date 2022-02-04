@@ -9,7 +9,7 @@ import com.google.android.material.tabs.TabLayout
 class landingscreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_navigation)
+
         var binding: ActivityLandingBinding
         = setContentView(this, R.layout.activity_landing)
 
