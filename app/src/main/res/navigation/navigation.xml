@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/historyFragment3">
+    <fragment
+        android:id="@+id/historyFragment3"
+        android:name="com.example.khatabook_20.HistoryFragment"
+        android:label="HistoryFragment"
+        tools:layout="@layout/fragment_history"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.khatabook_20.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.khatabook_20.home"
+        android:label="home"
+        tools:layout="@layout/fragment_home"/>
+</navigation>
