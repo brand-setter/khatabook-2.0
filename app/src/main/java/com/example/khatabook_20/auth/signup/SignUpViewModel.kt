@@ -17,8 +17,10 @@ class SignUpViewModel(application: Application): ViewModel() {
         authRepository= AuthRepository(application)
     }
 
-    fun login(email:String,password:String){
-        authRepository.login(email, password)
+
+    fun register(email:String,password:String){
+        authRepository.register(email, password)
+
     }
 }
 

@@ -15,10 +15,11 @@ class ViewPagerAdapter(var context: Context, fm: FragmentManager, var totalTabs:
         return when (position) {
             0 -> {
 
-                SignInFragment()
+             SignUpFragment()
             }
             1 -> {
-                SignUpFragment()
+
+                SignInFragment()
             }
             else -> getItem(position)
         }

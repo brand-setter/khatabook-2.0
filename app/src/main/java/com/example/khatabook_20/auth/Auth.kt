@@ -12,15 +12,14 @@ class Auth: AppCompatActivity(){
         super.onCreate(savedInstanceState)
 
            supportActionBar!!.hide()
-        var binding: ActivityAuthBinding
-                = DataBindingUtil.setContentView(this, R.layout.activity_auth)
+        val binding: ActivityAuthBinding = DataBindingUtil.setContentView(this, R.layout.activity_auth)
 
 
         val tablayout = binding.tablayout
         val viewpager = binding.viewpager
 
-        tablayout.addTab(tablayout.newTab().setText("SignIn"))
         tablayout.addTab(tablayout.newTab().setText("SignUp"))
+        tablayout.addTab(tablayout.newTab().setText("SignIn"))
 
         tablayout.tabGravity = TabLayout.GRAVITY_FILL
 
