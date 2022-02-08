@@ -11,10 +11,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 
 import androidx.lifecycle.ViewModelProvider
+import com.example.khatabook_20.Landingscreen
 import com.example.khatabook_20.R
 import com.example.khatabook_20.model.KhataBook
 import com.example.khatabook_20.databinding.FragmentSignInBinding
-import com.example.khatabook_20.home.Landingscreen
 
 class SignInFragment : Fragment() {
 private var khatabook: KhataBook = KhataBook("","","")
@@ -31,7 +31,10 @@ private var khatabook: KhataBook = KhataBook("","","")
         signInViewModel.firebaseUser.observe(viewLifecycleOwner, Observer{
             if(it!=null){
                val intent= Intent(application, Landingscreen::class.java)
+                intent.flags =
+                    Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(intent)
+
             }
         })
 

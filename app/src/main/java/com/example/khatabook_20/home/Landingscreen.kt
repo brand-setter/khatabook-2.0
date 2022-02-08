@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.setContentView
 import com.example.khatabook_20.R
 import com.example.khatabook_20.databinding.ActivityLandingBinding
+import com.example.khatabook_20.home.ViewPager
 import com.google.android.material.tabs.TabLayout
 
 class Landingscreen : AppCompatActivity() {
