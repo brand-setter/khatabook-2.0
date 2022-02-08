@@ -1,4 +1,4 @@
-package com.example.khatabook_20.home
+package com.example.khatabook_20
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +11,7 @@ class Landingscreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_navigation)
+
 
         var binding: ActivityLandingBinding
         = setContentView(this, R.layout.activity_landing)
