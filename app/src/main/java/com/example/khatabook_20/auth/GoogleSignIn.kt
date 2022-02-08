@@ -1,4 +1,4 @@
-package com.example.khatabook_20.auth//package com.example.khatabook_20
+//package com.example.khatabook_20
 //
 //import android.content.Intent
 //import android.os.Bundle

@@ -8,4 +8,8 @@
     <string name="password">Password</string>
     <string name="signup">signup</string>
     <string name="connect_with">Connect with</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+
 </resources>
